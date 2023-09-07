@@ -19,4 +19,10 @@ public class EmployeeServceImpl implements EmployeeService {
         // тут логика какой ДАО выбрать
         return employeeDAO.getAllEmployees();
     }
+
+    @Override
+    @Transactional
+    public void saveEmployee(Employee employee) {
+        employeeDAO.saveEmployee(employee);
+    }
 }

@@ -24,4 +24,10 @@ public class EmployeeDAOImpl implements EmployeeDAO {
         // a можно и одной строкой:
         // return sessionFactory.getCurrentSession().createQuery("from Employee", Employee.class).getResultList();
     }
+
+    @Override
+    public void saveEmployee(Employee employee) {
+        Session session = sessionFactory.getCurrentSession();
+        session.persist(employee); // записать в БД
+    }
 }
