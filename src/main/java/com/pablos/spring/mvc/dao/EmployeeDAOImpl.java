@@ -12,7 +12,7 @@ import java.util.List;
 
 @Repository // аннотация DAO
 public class EmployeeDAOImpl implements EmployeeDAO {
-    @Autowired //мы уже описали этот БИН в конфиге XML TODO: попробовать убрать эту аннотацию - СПРИНГ сам подхватит???
+    @Autowired //мы уже описали этот БИН в конфиге XML
     private SessionFactory sessionFactory;
 
     @Override

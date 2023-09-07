@@ -9,18 +9,19 @@
   <absolute-ordering />
 
   <servlet>
-    <servlet-name>dispatcher</servlet-name>
+    <servlet-name>dispatcher</servlet-name> <!-- это и есть Front Controller -->
     <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
     <init-param>
       <param-name>contextConfigLocation</param-name>
-      <param-value>/WEB-INF/applicationContext.xml</param-value>
+      <param-value>/WEB-INF/applicationContext.xml
+      </param-value> <!-- файл с конфигом Спринга, создать его тамже, где web.xml-->
     </init-param>
     <load-on-startup>1</load-on-startup>
   </servlet>
 
   <servlet-mapping>
     <servlet-name>dispatcher</servlet-name>
-    <url-pattern>/</url-pattern>
+    <url-pattern>/</url-pattern> <!-- '/' говорит о том, что dispatcher принимает любые http-запросы -->
   </servlet-mapping>
 
 </web-app>
