@@ -15,19 +15,27 @@
             <th>Surname</th>
             <th>Department</th>
             <th>Salary</th>
+            <th>Operations</th>
         </tr>
         <c:forEach var="emp" items="${allEmployees}">
+            <c:url var="updateBtn" value="/updateInfo"> <!-- делаем ссылку для кнопки -->
+                <c:param name="empId" value="${emp.id}"/> <!-- При переходе по ссылке будет доступна Переменная empId с ID работника -->
+            </c:url>
             <tr>
                 <td>${emp.name}</td>
                 <td>${emp.surname}</td>
                 <td>${emp.department}</td>
                 <td>${emp.salary}</td>
+                <td>
+                    <!-- тут рисуем кнопку и указываем ссылку для кнопки -->
+                    <input type="button" value="Update" onclick="window.location.href = '${updateBtn}'"/>
+                </td>
             </tr>
         </c:forEach>
     <br>
+    </table>
     <!-- addNewEmployee - это страница /addNewEmployee, на которой сработает метод Контроллера,
     соответствующий @RequestMapping("/addNewEmployee") -->
-    </table>
     <input type="button" value="Add" onclick="window.location.href = 'addNewEmployee'">
 </body>
 </html>

@@ -81,5 +81,14 @@ public class Employee {
     //endregion
 
 
-
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", department='" + department + '\'' +
+                ", salary=" + salary +
+                '}';
+    }
 }

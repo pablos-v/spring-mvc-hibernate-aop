@@ -10,6 +10,7 @@
     <h1>Employee info</h1>
     <br>
     <form:form action="saveNewEmployee" modelAttribute="newEmployee"> <!-- атрибут модели, в который всё сохранится -->
+        <form:hidden path = "id"/>
         Name <form:input path="name"/> <!-- строка ввода -->
         <br>
         SurName <form:input path="surname"/>
