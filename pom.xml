@@ -29,7 +29,7 @@
       <scope>provided</scope>
     </dependency>
 
-    <!-- эти 2 зависимости нужны для тега <%@ taglib prefix="c" uri="jakarta.tags.core" %> -->
+    <!-- эти зависимости нужны для тега <%@ taglib prefix="c" uri="jakarta.tags.core" %> -->
     <dependency>
       <groupId>org.glassfish.web</groupId>
       <artifactId>jakarta.servlet.jsp.jstl</artifactId>
@@ -72,6 +72,12 @@
       <groupId>org.springframework</groupId>
       <artifactId>spring-orm</artifactId>
       <version>6.0.11</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.aspectj/aspectjweaver for AOP -->
+    <dependency>
+      <groupId>org.aspectj</groupId>
+      <artifactId>aspectjweaver</artifactId>
+      <version>1.9.19</version>
     </dependency>
 
   </dependencies>

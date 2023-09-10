@@ -21,6 +21,9 @@
             <c:url var="updateBtn" value="/updateInfo"> <!-- делаем ссылку для кнопки -->
                 <c:param name="empId" value="${emp.id}"/> <!-- При переходе по ссылке будет доступна Переменная empId с ID работника -->
             </c:url>
+            <c:url var="deleteBtn" value="/deleteInfo"> <!-- делаем ссылку для кнопки -->
+                <c:param name="empId" value="${emp.id}"/> <!-- При переходе по ссылке будет доступна Переменная empId с ID работника -->
+            </c:url>
             <tr>
                 <td>${emp.name}</td>
                 <td>${emp.surname}</td>
@@ -29,6 +32,9 @@
                 <td>
                     <!-- тут рисуем кнопку и указываем ссылку для кнопки -->
                     <input type="button" value="Update" onclick="window.location.href = '${updateBtn}'"/>
+                </td>
+                <td>
+                    <input type="button" value="Delete" onclick="window.location.href = '${deleteBtn}'"/>
                 </td>
             </tr>
         </c:forEach>

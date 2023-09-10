@@ -19,7 +19,7 @@
         <br>
         Department <form:input path="department"/>
         <br>
-        <input type="submit" value="Add him!">
+        <input type="submit" value="OK">
     </form:form>
 </body>
 </html>

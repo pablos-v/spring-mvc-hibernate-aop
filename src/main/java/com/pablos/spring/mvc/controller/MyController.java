@@ -43,4 +43,11 @@ public class MyController {
         model.addAttribute("newEmployee", employee);
         return "add-employee-dialog";
     }
+
+    @RequestMapping("/deleteInfo")
+    public String deleteEmp(@RequestParam("empId") int id){
+        Employee employee = employeeService.getEmployee(id);
+        employeeService.delEmployee(employee);
+        return "redirect:/";
+    }
 }
